@@ -14,6 +14,8 @@ npm i webpack-feed-plugin
 
 ## Example
 
+#### webpack.config.js
+
 ```js
 var { WebpackFeedPlugin } = require("webpack-feed-plugin");
 
@@ -47,6 +49,20 @@ module.exports = {
         })
     ]
 }
+```
+
+#### Markdown front matter
+
+```md
+---
+title: "This is an article"
+author: NriotHrreion
+photo: "/static/example.png"
+excerpt: "This is a description of the article."
+date: 2024-02-23
+---
+
+Article Contents...
 ```
 
 ## LICENSE

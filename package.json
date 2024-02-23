@@ -1,6 +1,6 @@
 {
   "name": "webpack-feed-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A webpack plugin for generating RSS feed files",
   "main": "index.js",
   "scripts": {

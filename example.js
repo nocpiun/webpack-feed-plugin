@@ -5,6 +5,7 @@ const path = require("path");
 new WebpackFeedPlugin({
     site: "https://nin.red",
     postPath: path.resolve(__dirname, "../src/posts"),
+    postLink: "%s/%a", // Here: %s = https://nin.red, %a = Article Title
     output: {
         json: "feed.json",
         atom: "feed.xml"

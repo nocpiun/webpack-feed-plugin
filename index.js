@@ -25,6 +25,10 @@ const schema = {
             description: "Path of Your Articles",
             type: "string"
         },
+        postLink: {
+            description: "Link Format of Your Articles",
+            type: "string"
+        },
         output: {
             description: "Output Files",
             type: "object",
@@ -155,8 +159,8 @@ class WebpackFeedPlugin {
                         description: post.excerpt,
                         content: sanitizeHtml(await marked.parse(post.__content)),
                         image: this.options.site + post.photo,
-                        id: this.options.feedConfig.id +"/"+ post.title,
-                        link: this.options.feedConfig.link +"/"+ post.title,
+                        id: this.options.postLink.replaceAll("%s", this.options.feedConfig.id).replaceAll("%a", post.title),
+                        link: this.options.postLink.replaceAll("%s", this.options.feedConfig.link).replaceAll("%a", post.title),
                     });
                 }
             }

@@ -24,6 +24,7 @@ module.exports = {
         new WebpackFeedPlugin({
             site: "https://example.com",
             postPath: path.resolve(__dirname, "../src/posts"),
+            postLink: "%s/%a", // Here: %s = https://example.com, %a = Article Title
             output: {
                 json: "feed.json",
                 atom: "feed.xml"

@@ -5,7 +5,7 @@ const path = require("path");
 new WebpackFeedPlugin({
     site: "https://nin.red",
     postPath: path.resolve(__dirname, "../src/posts"),
-    postLink: "%s/%a", // Here: %s = https://nin.red, %a = Article Title
+    postLink: "%s/%a", // Here: %s = https://nin.red/blog, %a = Article Title
     output: {
         json: "feed.json",
         atom: "feed.xml"
@@ -13,10 +13,10 @@ new WebpackFeedPlugin({
     feedConfig: {
         title: "NBlog Feed",
         description: "由一条咸鱼搭建的博客",
-        id: "http://nin.red/blog",
-        link: "http://nin.red/blog",
+        id: "https://nin.red/blog",
+        link: "https://nin.red/blog",
         language: "zh-cn",
-        favicon: "http://nin.red/static/blog-icon.png",
+        favicon: "https://nin.red/static/blog-icon.png",
         copyright: `Copyright (c) ${new Date().getFullYear()} NriotHrreion`,
         feedLinks: {
             json: "https://nin.red/feed.json",

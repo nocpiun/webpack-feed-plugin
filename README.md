@@ -24,7 +24,7 @@ module.exports = {
         new WebpackFeedPlugin({
             site: "https://example.com",
             postPath: path.resolve(__dirname, "../src/posts"),
-            postLink: "%s/%a", // Here: %s = https://example.com, %a = Article Title
+            postLink: "%s/%a", // Here: %s = https://example.com/blog, %a = Article Title
             output: {
                 json: "feed.json",
                 atom: "feed.xml"
@@ -32,10 +32,10 @@ module.exports = {
             feedConfig: {
                 title: "My Feed",
                 description: "This is my feed, welcome to subscribe",
-                id: "http://example.com/blog",
-                link: "http://example.com/blog",
+                id: "https://example.com/blog",
+                link: "https://example.com/blog",
                 language: "en",
-                favicon: "http://example.com/favicon.ico",
+                favicon: "https://example.com/favicon.ico",
                 copyright: `Copyright (c) ${new Date().getFullYear()} NriotHrreion`,
                 feedLinks: {
                     json: "https://example.com/feed.json",
